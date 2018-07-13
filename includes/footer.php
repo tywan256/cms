@@ -8,6 +8,10 @@
     <script src="js/bootstrap-datepicker.min.js"></script>
     <script src="js/fnMultiFilter.js"></script>
     <script src="js/custom.js"></script>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        
         <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js">
         </script>

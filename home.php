@@ -64,7 +64,31 @@ if(!isUserLoggedIn()){
 
             <div class="row">
 
-                <div class="col-lg-3 col-md-3">
+                <div class="col-lg-4 col-md-4">
+
+                    <!-- Querry data from the database -->
+                    
+                        <form method="POST" role="form">
+                            
+                            <div class="form-group">
+
+                                <div class="form-group">
+                                    <input id="search" class="form-control" type="text" name="phrase" placeholder="Enter search value" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input  type="submit" class="btn btn-success" name="searchBtn" value="Search">
+                                </div>
+                           
+                                
+                            </div>
+                        
+                        </form>                 
+
+                </div>
+
+
+                <div class="col-lg-4 col-md-4">
                    
                     <!-- search with radio buttons -->
                      <div class="form-group">
@@ -84,65 +108,29 @@ if(!isUserLoggedIn()){
                             </div>
 
                     </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
 
                     <!-- Search with dates -->
-                    <div class="col-lg-9 col-md-9">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label">Creation Date</label>
                         <div class="input-group date">
-                            <input type="text" class="form-control" placeholder="Select a start date" id="start-date"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+                            <input type="text" class="form-control" placeholder="Select a start date" id="start-date" name="start-date"><span class="input-group-addon"><i class="icon-calendar"></i></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="control-label">End Creation Date</label>
                         <div class="input-group date">
-                            <input type="text" class="form-control" placeholder="Select a end date" id="end-date"><span class="input-group-addon"><i class="icon-calendar"></i></span>
+                            <input type="text" class="form-control" placeholder="Select a end date" id="end-date" name="end-date"><span class="input-group-addon"><i class="icon-calendar"></i></span>
                         </div>
-                    </div>
-                    </div>
-
-
-
+                    </div> -->
+                
                 </div>
 
 
-                <div class="col-lg-8 col-md-8 display-result">
-                    <div class="col-lg-12">
-                        <form method="POST" role="form">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label class="control-label">Search By:</label>                        
-
-                                    <div class="checkbox">
-                                        <select class="custom-checkbox" id="column-File-Name" name="searchby-column"  type="text">
-                                            <option value="2">File Name</option>
-                                            <option value="3">Metadata</option>
-                                        </select>
-                                        <label for="column-office"><span></span>File Name</label>
-                                    </div>
-
-                                    <!-- <div class="checkbox">
-                                        <input class="custom-checkbox" id="column-File-Name" name="searchby-column" value="2" type="checkbox" checked>
-                                        <label for="column-office"><span></span>File Name</label>
-                                    </div>
-                                    <div class="checkbox">
-                                        <input class="custom-checkbox" id="column-Creation-Date" name="searchby-column" value="5" type="checkbox" checked>
-                                        <label for="column-salary"><span></span>Metadata</label>
-                                    </div> -->
-                                </div>
-                            </div>
-                        <div class="col-lg-8">    
-                            <div class="form-group">
-                                <input id="search" class="form-control" type="text" name="phrase" placeholder="Enter search value" required>
-                                <input id="search-btn" type="submit" class="btn btn-success" name="searchBtn" value="Search">
-                            </div>
-                        </div>
-
-                    </form>
-                    </div>
-                    
-
-
+                <div class="col-lg-12 col-md-12 display-result">
+               
                     <table id="example" class="table table-oddEven-rows table-hover table-striped table-fixed-row-heights dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
                             <tr>
@@ -156,6 +144,7 @@ if(!isUserLoggedIn()){
                                 <th>Genera</th>
                             </tr>
                         </thead>
+
                         <tbody>
 
                             <?php 
@@ -192,6 +181,19 @@ if(!isUserLoggedIn()){
                             <?php }} ?>
 
                         </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <th>Asset Id</th>
+                                <th>Asset Type</th>
+                                <th>File Name</th>
+                                <th>Creation Date</th>
+                                <th>Tag</th>
+                                <th>Artist</th>
+                                <th>Country</th>
+                                <th>Genera</th>
+                            </tr>
+                        </tfoot>
                     </table>
 
                 </div>
